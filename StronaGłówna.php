@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koksotronic</title>
+    <title>MetaMorfizon</title>
     <link rel="stylesheet" type="text/css" href="style-koksotronic.css">
 </head>
 <body>
     <header>
-        <h1>Koksotronic</h1>
-        
+    
+        <div class="flex-container">
+            <div class="flex-container-left">
+                <div>MetaMorfizon</div>
+            </div>
+            <div class="flex-container-right">
+                <div><a href="Konto.html">8</a></div>
+            </div>
+
+        </div>
+    
         <nav>
             <ul class="navbar">
                 <li><a href="StronaGłówna.html">Strona główna</a></li>
@@ -30,6 +39,24 @@
             </ul>
         </nav>
     </header>
+    <h4> 
+        <div class="center">
+            <button>Utwórz</button>
+            <div class="badbad">Podziel się wiedzą!</div>
+        </div>
+    </h4> 
+
+    <?php
+    $servername ="localhost";
+    $username ="root";
+    $password = "";
+    $dbname = "MetaMorfizon";
+
+    $connection = new mysql($servername, $username, $password, $dbname);
+    if ($connection->connect_error) {
+        die("Połączenie nieudane: ". $connection->connect_error);
+    }
+    ?>
 
 </body>
 </html>
